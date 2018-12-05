@@ -1,0 +1,87 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>CITATION</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="../js/citation.js"></script>
+    <script src="../js/auteur.js"></script>
+</head>
+
+<body>
+<h1 id="titre" align="center">SITE OFFICIEL DES CITATIONS PRESUMEES</h1>
+<br>
+<div id="auRevoir" align="center"></div>
+<div id="proposition">
+    <fieldset>
+        <legend>Quel type de citatation voulez vous ?:</legend>
+        <label for="radio-1">Presumée normale</label>
+        <input type="radio" name="radio-1" value="normale" id="radio-1">
+        <label for="radio-2">Presumée un peu insistante</label>
+        <input type="radio" name="radio-1" value="insistante" id="radio-2">
+    </fieldset>
+
+    <fieldset>
+        <legend>Combien de Citation(s) voulez vous ?:</legend>
+        <button class="ui-button ui-widget ui-corner-all" onclick="generation(1)">1</button>
+        <button class="ui-button ui-widget ui-corner-all" onclick="generation(2)">2</button>
+        <button class="ui-button ui-widget ui-corner-all" onclick="generation(3)">3</button>
+        <button class="ui-button ui-widget ui-corner-all" onclick="generation(4)">4</button>
+        <button class="ui-button ui-widget ui-corner-all" onclick="generation(5)">5</button>
+    </fieldset>
+</div>
+<div id="typeCitation" ></div>
+<div id="accordion">
+    <h3 visiblility="hidden" id="cit1" onclick="onClick(1)">Citation 1</h3>
+    <div>
+        <p>
+        <div id="citation1"></div>
+        <div id="auteur1"></div>
+        </p>
+    </div>
+    <h3 id="cit2" onclick="onClick(2)">Citation 2</h3>
+    <div>
+        <p>
+        <div id="citation2"></div>
+        <div id="auteur2"></div>
+        </p>
+    </div>
+    <h3 id="cit3" onclick="onClick(3)">Citation 3</h3>
+    <div>
+        <p>
+        <div id="citation3"></div>
+        <div id="auteur3"></div>
+        </p>
+
+    </div>
+    <h3 id="cit4" onclick="onClick(4)">Citation 4</h3>
+    <div>
+        <p>
+        <div id="citation4"></div>
+        <div id="auteur4"></div>
+        </p>
+    </div>
+
+    <h3 id="cit5" onclick="onClick(5)">Citation 5</h3>
+    <div>
+        <p>
+        <div id="citation5"></div>
+        <div id="auteur5"></div>
+        </p>
+    </div>
+
+</div>
+
+<button class="ui-button ui-widget ui-corner-all" id="continuer" onclick="effacerAccordeon()">D autre(s) Citation(s)</button>
+<button class="ui-button ui-widget ui-corner-all" id="arreter" onclick="auRevoir()">Non</button>
+
+<script src="../js/generation.js"></script>
+
+</body>
+
+</html>
